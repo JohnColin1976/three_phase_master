@@ -1,0 +1,31 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug (J-Link, ATSAM3X8E)",
+      "type": "cortex-debug",
+      "request": "launch",
+      "servertype": "jlink",
+
+      "cwd": "${workspaceFolder}",
+      "executable": "${workspaceFolder}/build/transiver.elf",
+
+      "device": "ATSAM3X8E",
+      "interface": "swd",
+
+      "serverpath": "C:\\Program Files\\SEGGER\\JLink_V898\\JLinkGDBServerCL.exe",
+
+      "armToolchainPath": "C:\\work\\gcc-arm\\bin",
+      "gdbPath": "C:\\work\\gcc-arm\\bin\\arm-none-eabi-gdb.exe",
+
+      "serverArgs": [
+        "-speed", "4000",
+        "-singlerun"
+      ],
+
+      "runToEntryPoint": "main",
+      "preLaunchTask": "Build (CMake)",
+      "svdFile": "${workspaceFolder}/svd/SAM3X8E.svd"
+    }
+  ]
+}

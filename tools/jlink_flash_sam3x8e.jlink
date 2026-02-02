@@ -1,0 +1,9 @@
+device ATSAM3X8E
+if SWD
+speed 4000
+r
+h
+loadfile C:\work-1\three_phase_master\build\transiver.elf
+r
+g
+q

@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build (CMake)",
+      "type": "shell",
+      "command": "cmake",
+      "args": ["--build", "${workspaceFolder}/build", "--config", "Debug", "--target", "all"],
+      "problemMatcher": ["$gcc"],
+      "group": "build"
+    },
+    {
+      "label": "Flash (J-Link, SAM3X8E)",
+      "type": "shell",
+      "dependsOn": "Build (CMake)",
+      "command": "JLink.exe",
+      "args": [
+        "-NoGui",
+        "1",
+        "-CommandFile",
+        "${workspaceFolder}/tools/jlink_flash_sam3x8e.jlink"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}
+
