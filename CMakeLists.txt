@@ -10,6 +10,9 @@ set(MTHUMB "-mthumb")
 # sources
 add_executable(${PROJECT_NAME}
   ${CMAKE_SOURCE_DIR}/src/main.c
+  ${CMAKE_SOURCE_DIR}/src/init.c
+  ${CMAKE_SOURCE_DIR}/src/uart.c
+  ${CMAKE_SOURCE_DIR}/params/param.c
   ${CMAKE_SOURCE_DIR}/cmsis/SAM3X/Device/Source/system_SAM3XA.c
   ${CMAKE_SOURCE_DIR}/startup/startup_sam3x8e.c
   ${CMAKE_SOURCE_DIR}/src/sin_lut_1024.c
@@ -19,6 +22,7 @@ add_executable(${PROJECT_NAME}
 target_compile_definitions(${PROJECT_NAME} PRIVATE __SAM3X8E__)
 
 target_include_directories(${PROJECT_NAME} PRIVATE
+  ${CMAKE_SOURCE_DIR}/src/include
   ${CMAKE_SOURCE_DIR}/cmsis
   ${CMAKE_SOURCE_DIR}/cmsis/Core/Include
   ${CMAKE_SOURCE_DIR}/cmsis/SAM3X/Device/Include
