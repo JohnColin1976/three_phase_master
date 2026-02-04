@@ -11,6 +11,11 @@ typedef struct {
   uint32_t n_gen;       // Частота вращения ротора генератора
 } params_t;
 
+typedef struct {
+  uint32_t com_n_gen;   // установить частоту вращения генератора
+} params_in_t;
+
 extern params_t g_params;
+extern params_in_t g_params_in;
 
 #endif /* PARAM_H */
