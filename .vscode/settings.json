@@ -1,8 +1,8 @@
 {
   "cmake.configureSettings": {
-    "CMAKE_TOOLCHAIN_FILE": "${workspaceFolder}/cmake/arm-none-eabi.cmake",
+    "CMAKE_TOOLCHAIN_FILE": "${workspaceFolder:three_phase_master}/cmake/arm-none-eabi.cmake",
     "CMAKE_EXPORT_COMPILE_COMMANDS": "TRUE"
   },
   "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
-  "cmake.buildDirectory": "${workspaceFolder}/build"
+  "cmake.buildDirectory": "${workspaceFolder:three_phase_master}/build"
 }

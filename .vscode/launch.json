@@ -7,16 +7,16 @@
       "request": "launch",
       "servertype": "jlink",
 
-      "cwd": "${workspaceFolder}",
-      "executable": "${workspaceFolder}/build/transiver.elf",
+      "cwd": "${workspaceFolder:three_phase_master}",
+      "executable": "${workspaceFolder:three_phase_master}/build/transiver.elf",
 
       "device": "ATSAM3X8E",
       "interface": "swd",
 
-      "serverpath": "C:\\Program Files\\SEGGER\\JLink_V898\\JLinkGDBServerCL.exe",
+      "serverpath": "C:\\JLink\\JLinkGDBServerCL.exe",
 
-      "armToolchainPath": "C:\\work\\gcc-arm\\bin",
-      "gdbPath": "C:\\work\\gcc-arm\\bin\\arm-none-eabi-gdb.exe",
+      "armToolchainPath": "C:\\ArmGNU\\bin",
+      "gdbPath": "C:\\ArmGNU\\bin\\arm-none-eabi-gdb.exe",
 
       "serverArgs": [
         "-speed", "4000",
@@ -25,7 +25,7 @@
 
       "runToEntryPoint": "main",
       "preLaunchTask": "Build (CMake)",
-      "svdFile": "${workspaceFolder}/svd/SAM3X8E.svd"
+      "svdFile": "${workspaceFolder:three_phase_master}/svd/SAM3X8E.svd"
     }
   ]
 }

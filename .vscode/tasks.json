@@ -5,7 +5,7 @@
       "label": "Build (CMake)",
       "type": "shell",
       "command": "cmake",
-      "args": ["--build", "${workspaceFolder}/build", "--config", "Debug", "--target", "all"],
+      "args": ["--build", "${workspaceFolder:three_phase_master}/build", "--config", "Debug", "--target", "all"],
       "problemMatcher": ["$gcc"],
       "group": "build"
     },
@@ -18,7 +18,7 @@
         "-NoGui",
         "1",
         "-CommandFile",
-        "${workspaceFolder}/tools/jlink_flash_sam3x8e.jlink"
+        "${workspaceFolder:three_phase_master}/tools/jlink_flash_sam3x8e.jlink"
       ],
       "problemMatcher": []
     }

@@ -153,6 +153,9 @@ int main(void) {
 
   dacc_init();
 
+  uart_init();
+  uart1_init();
+
   amp = 1800;          // амплитуда (подбери)
   dds_set_freq_hz(50); // старт: 50 Гц для проверки
 
@@ -197,5 +200,9 @@ int main(void) {
   while (1) {
     //cv_test = TC0->TC_CHANNEL[0].TC_CV;
     //__WFI();
+    uart1_forward_rx_to_uart0();
+    if (uart0_poll_com_n_gen()) {
+      dds_set_freq_hz(g_params_in.com_n_gen);
+    }
   }
 }
